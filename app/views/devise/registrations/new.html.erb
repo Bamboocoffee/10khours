@@ -12,7 +12,7 @@
   }
 
   body {
-    background-image: <%= image_tag("bg-01.jpg", :alt => "rss feed") %>;
+    background-image: url(<%= asset_path 'bg-01.jpg' %>);
   }
 </style>
 <div class = vertical-center>
