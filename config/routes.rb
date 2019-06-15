@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get 'corner/The'
   get 'corner/Corner'
   get 'login_page/login'
-  root :to => '/users/sign_up'
+  root :to => 'login_page#login'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
