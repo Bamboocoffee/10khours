@@ -12,6 +12,23 @@
     border-radius: 6px;
 
   }
+  a{
+    color: #000000 !important;
+    text-decoration: none;
+  }
+  .button{
+    background-color: lightsteelblue;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 0 auto;
+    max-width: 100px;
+  }
+  .button:hover {
+    background-color:lightgreen;
+  }
   input[type=submit]:hover {
     background-color: lightgreen;
   }
@@ -73,8 +90,8 @@
           <%= f.submit "Sign up" %>
         </div>
         <br>
-        <div class="actions">
-          <%= f.submit %>
+        <div class="button">
+          <a href="/sign_in">Log In</a>
         </div>
       <% end %>
 
