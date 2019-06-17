@@ -1,4 +1,68 @@
-<h2>Log in</h2>
+<style>
+  h2{
+    font-family: Apercu;
+  }
+
+  input[type=submit] {
+    background-color: lightsteelblue;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+
+  }
+  a{
+    color: #000000 !important;
+    text-decoration: none;
+  }
+  .button{
+    background-color: lightsteelblue;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 0 auto;
+    max-width: 100px;
+  }
+  .button:hover {
+    background-color:lightgreen;
+  }
+  input[type=submit]:hover {
+    background-color: lightgreen;
+  }
+  @font-face {
+    font-family: Apercu;
+    src: url("/assets/apercu_regular_pro.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Apercu;
+    font-weight: bold;
+    src: url("/assets/apercu_bold_pro.otf") format("opentype");
+  }
+  .signin {
+    border: 2px solid black;
+    border-radius: 25px;
+    background: white;
+  }
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+  }
+
+  body {
+    background-image: url('/assets/bg-1.jpg');
+    background-size:cover;
+  }
+</style>
+<div class = vertical-center>
+  <div class = "container-fluid text-center">
+    <div class = "signin"; style="margin: auto; max-width: 350px; height: 550px; padding:30px">
+      <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -21,6 +85,12 @@
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
+        <br>
+  <div class="button">
+    <a href="/sign_up">Sign Up</a>
+  </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

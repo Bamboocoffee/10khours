@@ -1,11 +1,84 @@
-<h1>Welcome !</h1>
-<% if user_signed_in? %>
-  <p><%= current_user.email %></p>
-  <li>
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-  </li>
-<% else %>
-  <li>
-    <%= link_to('Login', new_user_session_path) %>
-  </li>
-<% end %>
+<style>
+  h2{
+    font-family: Apercu;
+  }
+
+  input[type=submit] {
+    background-color: lightsteelblue;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+
+  }
+  a{
+    color: #000000 !important;
+    text-decoration: none;
+  }
+  .button{
+    background-color: lightsteelblue;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 0 auto;
+    max-width: 100px;
+  }
+  .button:hover {
+    background-color:lightgreen;
+  }
+  input[type=submit]:hover {
+    background-color: lightgreen;
+  }
+  @font-face {
+    font-family: Apercu;
+    src: url("/assets/apercu_regular_pro.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Apercu;
+    font-weight: bold;
+    src: url("/assets/apercu_bold_pro.otf") format("opentype");
+  }
+  .signin {
+    border: 2px solid black;
+    border-radius: 25px;
+    background: white;
+  }
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+  }
+
+  body {
+    background-image: url('/assets/bg-1.jpg');
+    background-size:cover;
+  }
+</style>
+<div class = vertical-center>
+  <div class = "container-fluid text-center">
+    <div class = "signin"; style="margin: auto; max-width: 350px; height: 550px; padding:30px">
+      <% if user_signed_in? %>
+        <h2>Welcome !</h2>
+        <p><%= current_user.email %></p>
+        <div class = "button">
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        </div >
+      <% else %>
+        <h2>Welcome to 10k hours. Begin your journey here.</h2>
+        <br>
+        <div class = "button">
+          <%= link_to('Login', new_user_session_path) %>
+        </div>
+        <br>
+        <div class = "button">
+          <%= link_to('Sign Up', new_user_registration_path) %>
+        </div>
+    </div>
+  </div>
+</div>
+      <% end %>
