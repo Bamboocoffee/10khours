@@ -61,7 +61,7 @@
     .signin {
       margin: auto;
       max-width: 350px;
-      height: 550px;
+      height: 600px;
       padding:30px
     }
 </style>
@@ -74,7 +74,7 @@
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class="field">
           <%= f.label :name %><br />
-          <%= f.email_field :name, autofocus: true, autocomplete: "name" %>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
         </div>
         <br>
         <div class="field">

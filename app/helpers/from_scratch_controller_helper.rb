@@ -1,0 +1,2 @@
+module FromScratchControllerHelper
+end
